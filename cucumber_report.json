@@ -14,30 +14,30 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39878083
+              "duration": 1062418800
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I land on the homepage",
+            "name": "I open the side menu",
             "match": {
-              "location": "acceptance/stepDefinitions/CategoriesStep.js:4"
+              "location": "acceptance\\stepDefinitions\\CategoriesStep.js:10"
             },
             "result": {
               "status": "failed",
-              "duration": 1906762666,
-              "error_message": "locator.isVisible: Error: strict mode violation: locator('.cookie-banner .cookie-banner-controls button') resolved to 3 elements:\n    1) <button>…</button> aka locator('cookie-banner').getByRole('button', { name: 'Alle Cookies akzeptieren' })\n    2) <button>…</button> aka getByRole('button', { name: 'Nur erforderliche Cookies' })\n    3) <button>…</button> aka getByRole('button', { name: 'Cookie-Einstellungen' }).nth(2)\n\nCall log:\n  \u001b[2m-   checking visibility of locator('.cookie-banner .cookie-banner-controls button')\u001b[22m\n\n    at CategoriesPage.acceptCookie (/Users/igranagi/Downloads/playwright-cucumber-js/acceptance/pageObjects/CategoriesPage.js:17:40)\n    at World.<anonymous> (/Users/igranagi/Downloads/playwright-cucumber-js/acceptance/stepDefinitions/CategoriesStep.js:7:26)"
+              "duration": 1617700,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'locator')\n    at new CategoriesPage (C:\\Users\\HP\\OneDrive\\Documents\\playwright-cucumber-js\\acceptance\\pageObjects\\CategoriesPage.js:10:33)\n    at World.<anonymous> (C:\\Users\\HP\\OneDrive\\Documents\\playwright-cucumber-js\\acceptance\\stepDefinitions\\CategoriesStep.js:11:28)"
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 8,
-            "name": "I open the side menu",
+            "name": "I select three different categories",
             "match": {
-              "location": "acceptance/stepDefinitions/CategoriesStep.js:10"
+              "location": "acceptance\\stepDefinitions\\CategoriesStep.js:15"
             },
             "result": {
               "status": "skipped",
@@ -48,22 +48,9 @@
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "I select three different categories",
-            "match": {
-              "location": "acceptance/stepDefinitions/CategoriesStep.js:15"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
             "name": "I Select product from the side menu",
             "match": {
-              "location": "acceptance/stepDefinitions/CategoriesStep.js:20"
+              "location": "acceptance\\stepDefinitions\\CategoriesStep.js:20"
             },
             "result": {
               "status": "skipped",
@@ -73,7 +60,7 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 11,
+            "line": 10,
             "name": "I should be able to see the selected categories",
             "result": {
               "status": "undefined",
@@ -85,7 +72,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 10207625
+              "duration": 44932600
             }
           }
         ],
@@ -98,7 +85,7 @@
     "keyword": "Feature",
     "name": "Categories",
     "tags": [],
-    "uri": "acceptance/features/Categories.feature"
+    "uri": "acceptance\\features\\Categories.feature"
   },
   {
     "description": "    As a user \n    I want to test all basic scenarios for Home Page",
@@ -115,7 +102,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50948542
+              "duration": 602906600
             }
           },
           {
@@ -124,11 +111,11 @@
             "line": 7,
             "name": "I am on the home screen",
             "match": {
-              "location": "acceptance/stepDefinitions/HomeStep.js:4"
+              "location": "acceptance\\stepDefinitions\\HomeStep.js:4"
             },
             "result": {
               "status": "passed",
-              "duration": 1416221708
+              "duration": 5090483199
             }
           },
           {
@@ -137,12 +124,12 @@
             "line": 8,
             "name": "I should be able to see the correct URL",
             "match": {
-              "location": "acceptance/stepDefinitions/HomeStep.js:9"
+              "location": "acceptance\\stepDefinitions\\HomeStep.js:9"
             },
             "result": {
               "status": "failed",
-              "duration": 2306082,
-              "error_message": "Error: Playwright Test did not expect test() to be called here.\nMost common reasons include:\n- You are calling test() in a configuration file.\n- You are calling test() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n    at TestTypeImpl._currentSuite (/Users/igranagi/Downloads/playwright-cucumber-js/node_modules/playwright/lib/common/testType.js:71:13)\n    at TestTypeImpl._createTest (/Users/igranagi/Downloads/playwright-cucumber-js/node_modules/playwright/lib/common/testType.js:80:24)\n    at /Users/igranagi/Downloads/playwright-cucumber-js/node_modules/playwright/lib/transform/transform.js:256:12\n    at HomePage.assertPageUrl (/Users/igranagi/Downloads/playwright-cucumber-js/acceptance/pageObjects/homePage.js:34:15)\n    at async World.<anonymous> (/Users/igranagi/Downloads/playwright-cucumber-js/acceptance/stepDefinitions/HomeStep.js:11:5)"
+              "duration": 1686799,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'locator')\n    at new HomePage (C:\\Users\\HP\\OneDrive\\Documents\\playwright-cucumber-js\\acceptance\\pageObjects\\homePage.js:11:40)\n    at World.<anonymous> (C:\\Users\\HP\\OneDrive\\Documents\\playwright-cucumber-js\\acceptance\\stepDefinitions\\HomeStep.js:10:22)"
             }
           },
           {
@@ -150,7 +137,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 7447166
+              "duration": 46362500
             }
           }
         ],
@@ -169,7 +156,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56285708
+              "duration": 258131299
             }
           },
           {
@@ -178,12 +165,12 @@
             "line": 11,
             "name": "I click on the login icon",
             "match": {
-              "location": "acceptance/stepDefinitions/HomeStep.js:14"
+              "location": "acceptance\\stepDefinitions\\HomeStep.js:14"
             },
             "result": {
               "status": "failed",
-              "duration": 30102702832,
-              "error_message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('.cookie-banner .cookie-banner-controls button')\u001b[22m\n\n    at HomePage.acceptCookie (/Users/igranagi/Downloads/playwright-cucumber-js/acceptance/pageObjects/homePage.js:21:36)\n    at World.<anonymous> (/Users/igranagi/Downloads/playwright-cucumber-js/acceptance/stepDefinitions/HomeStep.js:16:20)"
+              "duration": 30116939600,
+              "error_message": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('.country-picker-container button')\u001b[22m\n\n    at HomePage.clickGoButton (C:\\Users\\HP\\OneDrive\\Documents\\playwright-cucumber-js\\acceptance\\pageObjects\\homePage.js:25:39)\n    at World.<anonymous> (C:\\Users\\HP\\OneDrive\\Documents\\playwright-cucumber-js\\acceptance\\stepDefinitions\\HomeStep.js:17:20)"
             }
           },
           {
@@ -192,7 +179,7 @@
             "line": 12,
             "name": "I should see a panel opened with input fields with email address, password, register and login buttons",
             "match": {
-              "location": "acceptance/stepDefinitions/HomeStep.js:21"
+              "location": "acceptance\\stepDefinitions\\HomeStep.js:21"
             },
             "result": {
               "status": "skipped",
@@ -204,7 +191,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 17211209
+              "duration": 12162700
             }
           }
         ],
@@ -223,7 +210,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 51270042
+              "duration": 236214899
             }
           },
           {
@@ -261,7 +248,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2502540
+              "duration": 12579299
             }
           }
         ],
@@ -274,6 +261,6 @@
     "keyword": "Feature",
     "name": "Home Page",
     "tags": [],
-    "uri": "acceptance/features/Home.feature"
+    "uri": "acceptance\\features\\Home.feature"
   }
 ]

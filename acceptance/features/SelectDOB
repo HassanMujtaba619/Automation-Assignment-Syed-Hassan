@@ -1,0 +1,11 @@
+Feature: Select Date of Birth (DOB)
+
+  Scenario: User selects DOB in profile
+    Given I am on the home page
+    Then I should see the correct URL
+    When I click on the login icon
+    And I enter "user@example.com" and "password123"
+    And I click on the register button
+    When I click on the user profile icon
+    And I go to the user profile
+    Then I should select the date of birth

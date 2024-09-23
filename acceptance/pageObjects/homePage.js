@@ -7,19 +7,19 @@ exports.HomePage = class HomePage {
      */
     constructor(page) {
         this.page = page;
-        this.acceptCookieBtn = page.locator(".cookie-banner .cookie-banner-controls button");
+        //this.acceptCookieBtn = page.locator(".cookie-banner .cookie-banner-controls button");
         this.selectCountryGoBtn = page.locator('.country-picker-container button');
         this.customerWidgetBtn = page.locator(".fashion-header .customer-widget");
         this.customerMenuLoginPanel = page.locator(".customer-menu.no-login.active");
         this.emailLoginWidgetTxt = page.locator(".customer-menu.no-login.active [type='email']");
         this.passwordLoginWidgetTxt = page.locator(".customer-menu.no-login.active [type='password']")
         this.loginBtn = page.locator(".button-login.disabled");
-        this.loginWidgetXIconBtn = page.locator(".right-items .customer-widget")
+        this.loginWidgetXIconBtn = page.locator(".customer-widget svg.grey")
     }
 
-    async acceptCookie() {
-        await this.acceptCookieBtn.click();
-    }
+    // async acceptCookie() {
+    //     await this.acceptCookieBtn.click();
+    // }
 
     async clickGoButton() {
         await this.selectCountryGoBtn.click({force: true});

@@ -1,0 +1,39 @@
+const { Given, When, Then } = require('@cucumber/cucumber');
+const { expect } = require('@playwright/test');
+const HomePage = require('./pageObjects/HomePage');
+const UserProfilePage = require('../pageObjects/UserProfilePage');
+
+Given('I am on the home page', async function () {
+  this.homePage = new HomePage(this.page);
+  await this.homePage.navigateToHomePage();
+});
+
+Then('I should see the correct URL', async function () {
+  const url = await this.page.url();
+  expect(url).toContain('https://www.newyorker.de/men/'); 
+});
+
+When('I click on the login icon', async function () {
+  await this.homePage.clickLoginIcon();
+});
+
+When('I enter {string} and {string}', async function (email, password) {
+  await this.homePage.enterCredentials(email, password);
+});
+
+When('I click on the register button', async function () {
+  await this.homePage.clickRegisterButton();
+});
+
+When('I click on the user profile icon', async function () {
+  await this.homePage.clickUserProfileIcon();
+});
+
+Then('I go to the user profile', async function () {
+  this.userProfilePage = new UserProfilePage(this.page);
+  await this.userProfilePage.navigateToUserProfile();
+});
+
+Then('I should select the date of birth', async function () {
+  await this.userProfilePage.selectDOB('1995-04-11'); //
+});

@@ -7,13 +7,13 @@ Given('I am on the home screen', async function () {
 });
 
 Then('I should be able to see the correct URL', async function () {
-    const homePage = new HomePage(page);
+    const homePage = new HomePage(this.page);
     await homePage.assertPageUrl();
 });
 
 When('I click on the login icon', async function () {
     const homePage = new HomePage(page);
-    await homePage.acceptCookie();
+    //await homePage.acceptCookie();
     await homePage.clickGoButton();
     await homePage.clickLoginIcon();
 });
